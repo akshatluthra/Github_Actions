@@ -30,7 +30,7 @@ jobs:
                 python-version: 3.x
 
             - name: Test job
-              run: "Running a test job"
+              run: echo"Running a test job"
             
             - name : Run tests
               run: |
