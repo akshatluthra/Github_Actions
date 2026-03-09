@@ -1,0 +1,47 @@
+name: Multi-Job Workflow
+on: [push]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v2
+            
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                python-version: 3.x
+
+            - name: Run a simple command
+              run: echo "Hello, Guys, This is a multi-job workflow!"
+
+            - name: Run a build job
+              run: echo "Running build job..."
+    
+    test:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: checkout code
+              uses: actions/checkout@v2
+
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                python-version: 3.x
+
+            - name: Test job
+              run: "Running a test job"
+            
+            - name : Run tests
+              run: |
+                echo "Running tests..."
+                echo "Tests completed!"
+    
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy job
+              run: "Running a deploy job"
+
+            - name: Run & Execute shell script
+              run: chmod +x deploy.sh && ./deploy.sh
