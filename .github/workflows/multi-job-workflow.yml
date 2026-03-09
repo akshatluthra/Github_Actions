@@ -42,6 +42,9 @@ jobs:
         steps:
             - name: Deploy job
               run: echo "Running a deploy job"
+            
+            - name: Run List Command
+              run: ls -la
 
             - name: Run & Execute shell script
               run: chmod +x deploy.sh && ./deploy.sh
