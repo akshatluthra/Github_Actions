@@ -1,0 +1,26 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                python-version: '3.x'
+            
+            - name: Run a simple command
+              run: echo "Hello, GitHub Actions!"
+
+            - name: Run tests
+              run: |
+                echo "Running tests..."
+                echo "Tests completed!"
+            
+            - name: Deploy
+              run: |
+               echo "Deploying application..."
+               echo "Deployment completed!"
