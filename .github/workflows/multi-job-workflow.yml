@@ -44,7 +44,7 @@ jobs:
               run: echo "Running a deploy job"
             
             - name: Run List Command
-              run: ls -la
+              run: ls -ltra
 
             - name: Run & Execute shell script
               run: chmod +x deploy.sh && ./deploy.sh
