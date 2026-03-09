@@ -40,11 +40,14 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
+            - name: checkout code
+              uses: actions/checkout@v2
+
             - name: Deploy job
               run: echo "Running a deploy job"
             
-            - name: Run Present Working Directory
-              run: pwd
+            # - name: Run Present Working Directory
+            #   run: pwd
 
             - name: Run & Execute shell script
               run: chmod +x deploy.sh && ./deploy.sh
