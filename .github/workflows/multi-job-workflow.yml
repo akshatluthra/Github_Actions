@@ -43,8 +43,8 @@ jobs:
             - name: Deploy job
               run: echo "Running a deploy job"
             
-            - name: Run List Command
-              run: ls -ltra
+            - name: Run Present Working Directory
+              run: pwd
 
             - name: Run & Execute shell script
               run: chmod +x deploy.sh && ./deploy.sh
