@@ -41,7 +41,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Deploy job
-              run: "Running a deploy job"
+              run: echo "Running a deploy job"
 
             - name: Run & Execute shell script
               run: chmod +x deploy.sh && ./deploy.sh
