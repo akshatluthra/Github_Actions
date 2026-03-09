@@ -16,7 +16,7 @@ jobs:
             - name: checkout code
               uses: actions/checkout@v2
             - name: run tests
-              run: "Running tests..."
+              run: echo "Running tests..."
 
     deploy:
         runs-on: ubuntu-latest
